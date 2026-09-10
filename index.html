@@ -1,40 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AR 3D Fotosintesis</title>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <style>
-    html,body{margin:0;height:100%;font-family:Arial,sans-serif;background:#f5fbf3}
-    .wrap{max-width:900px;margin:auto;padding:16px;box-sizing:border-box}
-    h1{font-size:24px;margin:6px 0 8px;color:#205c2a}
-    p{line-height:1.5;color:#333}
-    model-viewer{width:100%;height:70vh;min-height:420px;background:linear-gradient(#dff5ff,#fff)}
-    .note{background:#fff;border-radius:12px;padding:14px;margin-top:12px;box-shadow:0 2px 10px #0001}
-    .ar-button{background:#2e8b57;color:#fff;border:0;border-radius:10px;padding:12px 18px;font-size:16px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AR 3D Fotosintesis</title>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(#dff6ff,#fff);color:#17351f}.wrap{max-width:1000px;margin:auto;padding:18px}.card{background:#fff;border-radius:18px;box-shadow:0 5px 18px rgba(0,0,0,.12);overflow:hidden}.head{padding:18px 20px 8px;text-align:center}.head h1{margin:0;color:#218838;font-size:28px}.head p{line-height:1.55;margin:8px 0 0}.viewer{padding:12px}model-viewer{width:100%;height:620px;background:linear-gradient(#c9efff 0%,#f7fdff 68%,#fff 100%);border-radius:14px;--poster-color:transparent}.ar-button{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);background:#218838;color:#fff;border:0;border-radius:12px;padding:13px 20px;font-size:16px;font-weight:700;box-shadow:0 3px 10px rgba(0,0,0,.18)}.info{padding:0 20px 22px}.info h2{color:#218838;margin:8px 0}.info p{line-height:1.65}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.item{background:#eef8f0;border-radius:12px;padding:13px;text-align:center}.item b{display:block;font-size:20px;color:#218838;margin-bottom:5px}.tip{margin-top:14px;padding:13px 15px;border-radius:12px;background:#fff8df;line-height:1.55}@media(max-width:600px){.wrap{padding:8px}.head h1{font-size:23px}model-viewer{height:520px}}
+</style>
 </head>
 <body>
-<div class="wrap">
-  <h1>AR 3D Proses Fotosintesis</h1>
-  <p>Putar model dengan jari/mouse. Pada perangkat yang mendukung AR, tekan tombol <b>View in your space</b> untuk melihat model 3D di lingkungan nyata.</p>
-
-  <model-viewer
-    src="photosynthesis_3d.glb"
-    camera-controls
-    auto-rotate
-    ar
-    ar-modes="webxr scene-viewer quick-look"
-    shadow-intensity="1"
-    exposure="1"
-    alt="Model 3D fotosintesis: cahaya matahari, tanaman, CO2, H2O dan O2">
-    <button slot="ar-button" class="ar-button">Lihat dalam AR</button>
-  </model-viewer>
-
-  <div class="note">
-    <b>Komponen fotosintesis:</b> cahaya matahari, karbon dioksida (CO₂), dan air (H₂O) digunakan tanaman untuk menghasilkan oksigen (O₂) dan bahan organik.
-  </div>
+<div class="wrap"><div class="card">
+<div class="head"><h1>🌱 AR 3D Proses Fotosintesis</h1><p>Putar, zoom, dan amati model tanaman. Pada HP yang mendukung AR, tekan <b>Lihat dalam AR</b> untuk menempatkan model di lingkungan nyata.</p></div>
+<div class="viewer">
+<model-viewer src="photosynthesis_tree_3d.glb" alt="Model 3D tanaman dan proses fotosintesis" camera-controls auto-rotate rotation-per-second="18deg" ar ar-modes="webxr scene-viewer quick-look" shadow-intensity="1" exposure="1" camera-orbit="25deg 72deg 8m" field-of-view="35deg" interaction-prompt="auto">
+<button slot="ar-button" class="ar-button">📱 Lihat dalam AR</button>
+</model-viewer>
 </div>
-</body>
-</html>
+<div class="info"><h2>Komponen Fotosintesis</h2><p>Fotosintesis adalah proses tumbuhan hijau membuat bahan organik dengan memanfaatkan energi cahaya. Tumbuhan mengambil <b>CO₂</b> dari udara dan <b>H₂O</b> dari tanah, kemudian menghasilkan <b>O₂</b> dan bahan organik.</p><div class="grid"><div class="item"><b>☀️ Cahaya</b>Sumber energi</div><div class="item"><b>CO₂</b>Masuk dari udara</div><div class="item"><b>H₂O</b>Diserap akar</div><div class="item"><b>O₂</b>Dilepaskan ke udara</div></div><div class="tip"><b>Untuk pembelajaran:</b> gunakan model ini sebagai media pengamatan. Siswa dapat mengidentifikasi bagian tanaman serta arah masuknya bahan yang diperlukan dan keluarnya oksigen.</div></div>
+</div></div>
+</body></html>
