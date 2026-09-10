@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AR 3D Fotosintesis</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    html,body{margin:0;height:100%;font-family:Arial,sans-serif;background:#f5fbf3}
+    .wrap{max-width:900px;margin:auto;padding:16px;box-sizing:border-box}
+    h1{font-size:24px;margin:6px 0 8px;color:#205c2a}
+    p{line-height:1.5;color:#333}
+    model-viewer{width:100%;height:70vh;min-height:420px;background:linear-gradient(#dff5ff,#fff)}
+    .note{background:#fff;border-radius:12px;padding:14px;margin-top:12px;box-shadow:0 2px 10px #0001}
+    .ar-button{background:#2e8b57;color:#fff;border:0;border-radius:10px;padding:12px 18px;font-size:16px}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>AR 3D Proses Fotosintesis</h1>
+  <p>Putar model dengan jari/mouse. Pada perangkat yang mendukung AR, tekan tombol <b>View in your space</b> untuk melihat model 3D di lingkungan nyata.</p>
+
+  <model-viewer
+    src="photosynthesis_3d.glb"
+    camera-controls
+    auto-rotate
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    shadow-intensity="1"
+    exposure="1"
+    alt="Model 3D fotosintesis: cahaya matahari, tanaman, CO2, H2O dan O2">
+    <button slot="ar-button" class="ar-button">Lihat dalam AR</button>
+  </model-viewer>
+
+  <div class="note">
+    <b>Komponen fotosintesis:</b> cahaya matahari, karbon dioksida (CO₂), dan air (H₂O) digunakan tanaman untuk menghasilkan oksigen (O₂) dan bahan organik.
+  </div>
+</div>
+</body>
+</html>
